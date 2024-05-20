@@ -9,3 +9,15 @@ axios.get('https://pokeapi.co/api/v2/pokemon/pikachu')
   .catch(error => {
     console.error('Error:', error);
   });
+
+ <script>
+    axios.get('https://pokeapi.co/api/v2/pokemon/pikachu')
+      .then(response => {
+        response.data.abilities.forEach(abilityObj => {
+          console.log(abilityObj.ability.name);
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  </script>
