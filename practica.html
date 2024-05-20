@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const ImparPar = ()=>{
+        let num = parseInt(prompt('Ingrese un numero:'))
+        if(isNaN(num)||num <= 0){
+            console.log('Ingrese otro valor')
+        }else{
+            for(let i = 1; i <= num; i++){
+                if (i %2 == 0){
+            console.log(`${i} es par`)
+        }else{
+            console.log(`${i} es impar`)   
+            }
+        }     
+    } 
+} 
+    ImparPar();
+    </script>
+</body>
+</html>

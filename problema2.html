@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let pass = 'cont'
+let vec1 = []
+let vec2 = []
+
+    while(pass != 'listo'){
+        let input = prompt('Ingrese un número, y escriba listo cuando quiera salir: ').toLowerCase();
+    if (input == 'listo') {
+        pass = 'listo';
+    } else {
+        let num = parseFloat(input);
+        if (isNaN(num)) {
+            console.log('Esto no es un número');
+        } else {
+            vec1.push(num);
+        }
+    }
+}
+
+    //1,2,3,4-listo
+    const NumVec2 = (array) =>{
+        for(let i = 0; i<array.length; i++){
+        let num2 = parseInt(prompt('Ingrese un numero: '))
+        vec2.push(num2)
+        }
+    }
+
+    const Sumavec1vec2 = (array, array2)=>{
+        vec3 = []
+        for(i in array){
+        let resultado = array[i] + array2[i]
+        vec3.push(resultado)
+        }
+        console.log(vec3)
+    }
+
+    NumVec2(vec1)
+    console.log(vec1)
+    console.log(vec2)
+    Sumavec1vec2(vec1,vec2)
+    </script>
+</body>
+</html>

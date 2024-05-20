@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    class Pelicula {
+    constructor(tittle, author, year, gender){
+        this.tittle = tittle
+        this.author = author
+        this.year = year
+        this.gender = gender
+    }
+    
+    GetAuthors(){
+        return this.author
+    }
+
+    getGender(){
+        return this.gender
+    }
+
+    PelisInfo(){
+        return `Tittle: ${this.tittle}, Author: ${this.author}, Year: ${this.year}, Gender: ${this.gender}`
+    }
+
+}
+
+let pelis = []
+
+while (pelis.length < 3){
+    let title = prompt("Que titulo tiene la pelicula: ")
+    let author = prompt("Quien es el autor de la pelicula: ")
+    let year = prompt("Que año es la pelicula: ")
+    let gender = prompt("Que genero es la pelicula: ").toLocaleUpperCase()
+
+    if (title != '' &&
+        author != '' &&
+        !isNaN(year) &&
+        year.length == 4 &&
+        (gender == 'accion' || gender == 'comedia' || gender == 'drama')){
+            pelis.push(new Pelicula(title, author, year, gender))
+        }
+}
+
+const showallPeli= () => {
+    console.log(pelis)
+}
+
+const showAuthors = () =>{
+    let authors = []
+    for(const peli of pelis){
+        author.push(pelis.GetAuthors())
+    }
+    console.log(authors.sort()); 
+}
+
+const getGender = () =>{
+    const gender = prompt("Ingrese el genero a buscar: ")
+    for(const peli of pelis){
+        if (pelis.getGender() == gender){
+            console.log (peli.PelisInfo)
+        }
+    }
+}
+    </script>
+</body>
+</html>
